@@ -38,10 +38,11 @@
     <ul>
       <li ng-repeat="item in books" ng-class="{active: isSelectedItem(item)}">
         <a ng-href="#/list/{{item.name}}" ng-click="selectItem(item)">{{item.name}}</a>
+        <a ui-sref=".item({item: item.name})" ng-click="selectItem(item)">{{item.name}}</a>
       </li>
     </ul>
   </div>
-  <div class="span8"></div>
+  <div class="span8" ui-view></div>
 </div>
 </script>
 
